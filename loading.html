@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>loading</title>
+  <style>
+    body{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #es{
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+    }
+    #es:nth-child(1){
+      border-bottom: 10px solid blue;
+      animation: move1 2s infinite linear;
+    }
+    @keyframes move1{
+      from {transform: rotateX(70deg) rotateZ(0deg);}
+      to {transform: rotateX(70deg) rotateZ(360deg);}
+    }
+    #es:nth-child(2){
+      border-bottom: 10px solid red;
+      animation: move2 2s infinite linear;
+    }
+    @keyframes move2{
+      from {transform: rotateY(64deg) rotateX(30deg) rotateZ(280deg);}
+      to {transform: rotateY(64deg) rotateX(30deg) rotateZ(640deg);}
+    }
+    #es:nth-child(3){
+      border-bottom: 10px solid yellow;
+      animation: move3 2s infinite linear;
+    }
+    @keyframes move3{
+      from {transform: rotateY(-64deg) rotateX(30deg) rotateZ(180deg);}
+      to {transform: rotateY(-64deg) rotateX(30deg) rotateZ(540deg);}
+    }
+    #loading{
+      font-size: large;
+    }
+  </style>
+</head>
+<body>
+  <div id="es"></div>
+  <div id="es"></div>
+  <div id="es"></div>
+  <div id="loading">loading...</div>
+</body>
+</html>
